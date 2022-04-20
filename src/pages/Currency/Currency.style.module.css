@@ -1,0 +1,128 @@
+.exchange_wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
+  min-height: 270px;
+  max-height: fit-content;
+  margin: 0 auto;
+  margin-top: 5vh;
+  height: fit-content;
+  border-radius: 15px;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 10px -1px rgba(148,148,148,0.65); 
+  box-shadow: 0px 5px 10px -1px rgba(148,148,148,0.65);
+  transition: max-height 0.3s ease;
+}
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 15px;
+  margin-top: 60px;
+}
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.input{
+  box-sizing: border-box;
+  height: 35px;
+  width: 170px;
+  padding: 0;
+  padding-left: 5px;
+  border: 1px solid #a8a8a8;
+  border-radius: 5px;
+  font-size: inherit;
+  outline: none;
+}
+.input:focus {
+  outline: none;
+}
+.label {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.convert_btn {
+  cursor: pointer;
+  background-color: #0071eb;
+  padding: 10px 15px;
+  margin-top: 40px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: inherit;
+  font-weight: 600;
+  color: white;
+}
+.convert_btn:disabled {
+  background-color: #64a6ec;
+  cursor: auto;
+}
+.option {
+  box-sizing: border-box;
+  height: 25px;
+  padding: 15px 0;
+  color: red;
+}
+.result {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.loader {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.loader {
+  font-size: 10px;
+  margin-top: 20px;
+  border-top: 4px solid #64a6ec;
+  border-right: 4px solid #64a6ec;
+  border-bottom: 4px solid #64a6ec;
+  border-left: 4px solid #ffffff;
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+@media only screen and (max-width: 575px){
+  .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 15px;
+  }
+  .label {
+    margin-top: 25px;
+  }
+  .exchange_wrapper {
+    height: fit-content;
+  }
+  .convert_btn {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  .result {
+    margin-bottom: 35px;
+  }
+  .loader {
+    margin-bottom: 35px;
+  }
+}

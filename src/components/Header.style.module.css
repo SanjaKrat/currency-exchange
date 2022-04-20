@@ -1,0 +1,53 @@
+.header_container {
+  z-index: 10;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20vh;
+  background-color: #0a146e;
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+}
+.logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 48px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  font-style: italic;
+  color: white;
+  letter-spacing: 0.2rem;
+
+  border-radius: 10px;
+}
+.currency_wrapper{
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+.currency_item {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-right: 25px;
+  color: white;
+}
+
+@media only screen and (max-width: 575px){
+  .currency_wrapper{
+    flex-direction: column;
+  }
+  .currency_item {
+    font-size: 0.8rem;
+  }
+}
